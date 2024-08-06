@@ -16,10 +16,3 @@ char	*ft_strrchr(const char *s, int c)
     }
     return (0);
 }
-
-/*int main()
-{
-    char *s = "samet";
-    printf("%s \n",ft_strrchr(s,'e'));
-    printf("%s ",strrchr(s,'e'));
-}*/

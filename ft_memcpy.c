@@ -2,30 +2,15 @@
 #include "libft.h"
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int i;
-	unsigned char *tmp_dst;
-	unsigned char *tmp_src;
-	if (dst == NULL || src == NULL)
-		return dst;
-	
-	tmp_dst = (unsigned char *)dst;
-	tmp_src = (unsigned char *)src;
-	while (n > 0)
+	size_t	i;
+
+	if (dst == NULL && src == NULL)
+		return (0);
+	i = 0;
+	while (i < n)
 	{
-		tmp_dst[i] = tmp_src[i];
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;
-		n--;
 	}
-	return(dst);
-
+	return (dst);
 }
-
-/*int main()
-{
-    char src[] = "samet";
-    char dst[5];
-
-    
-
-    printf("%s",ft_memcpy(dst,src,5));
-}*/

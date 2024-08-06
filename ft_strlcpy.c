@@ -2,15 +2,31 @@
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dest, const char *src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	if (n > 0)
+	{
+		while (i < (n - 1) && src[i] != '\0')
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (ft_strlen(src));
+}
+/*size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 
-   /*
+
    ---dizeyi her zaman NUL ile sonlandırır.
    Eğer dizeyi kesmeden NUL ile sonlandıracak kadar uzun bir dstsize verirseniz, strlcpy() strcpy() ile yaptığınız gibi dizeyi kopyalayacaktır. Yeterince uzun bir dstsize vermezseniz, kaynaktan hedefe dstsize - 1 karakter kopyalar ve bundan sonra NUL-sonlandırma karakterini ekler.
 
    strlcpy() fonksiyonu her zaman oluşturmaya çalıştığı dizenin uzunluğunu döndürür, bu src'nin uzunluğudur, dizeyi NUL ile sonlandırmak için kesmeniz gerekse bile.
-   */
+   
    size_t i;
 
    i = 0;
@@ -27,4 +43,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
    while (src[i])
       i++;
    return(i);
-}
+} */

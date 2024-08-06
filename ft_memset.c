@@ -11,11 +11,3 @@ void    *ft_memset(void *b, int c, size_t len)
     }
     return(b);
 }
-
-/*int main()
-{
-    char s[] = "samet";
-
-    ft_memset(s,'c',5);
-    printf("%s ",s);
-}*/

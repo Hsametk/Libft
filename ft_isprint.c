@@ -1,9 +1,9 @@
 
 #include "libft.h"
 
-int     isascii(int c)
+int     ft_isprint(int c)
 {
-    if ( c >= 32 && c <= 132)
+    if ( c >= 32 && c <= 126)
         return (1);
     return (0);
     
